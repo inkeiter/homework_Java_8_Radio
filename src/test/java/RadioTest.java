@@ -3,45 +3,45 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
-    @Test
-    public void constructionTestUpperUnvalid() {
-        Radio radio = new Radio(20);
-
-        int expected = 0;
-        int actual = radio.getCurrentStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void constructionTestUnderUnvalid() {
-        Radio radio = new Radio(-2);
-
-        int expected = 0;
-        int actual = radio.getCurrentStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void constructionTestValid() {
-        Radio radio = new Radio(9);
-
-        int expected = 9;
-        int actual = radio.getCurrentStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void constructionTestJustValid() {
-        Radio radio = new Radio(6);
-
-        int expected = 6;
-        int actual = radio.getCurrentStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void constructionTestUpperUnvalid() {
+//        Radio radio = new Radio(20);
+//
+//        int expected = 0;
+//        int actual = radio.getCurrentStation();
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void constructionTestUnderUnvalid() {
+//        Radio radio = new Radio(-2);
+//
+//        int expected = 0;
+//        int actual = radio.getCurrentStation();
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void constructionTestValid() {
+//        Radio radio = new Radio(9);
+//
+//        int expected = 9;
+//        int actual = radio.getCurrentStation();
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void constructionTestJustValid() {
+//        Radio radio = new Radio(6);
+//
+//        int expected = 6;
+//        int actual = radio.getCurrentStation();
+//
+//        Assertions.assertEquals(expected, actual);
+//    }
 
     @Test
     public void shouldSetUpperValidStation() {

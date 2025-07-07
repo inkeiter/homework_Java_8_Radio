@@ -14,13 +14,13 @@ public class Radio {
         minVolume = 0;
    }
 
-    public Radio(int stationNumber) {
-        if (stationNumber >= 0 && stationNumber <= 9) {
-            this.currentStation = stationNumber;
-        } else {
-            this.currentStation = 0;
-        }
-    }
+//    public Radio(int stationNumber) {
+//        if (stationNumber >= 0 && stationNumber <= 9) {
+//            this.currentStation = stationNumber;
+//        } else {
+//            this.currentStation = 0;
+//        }
+//    }
 
     public int getCurrentStation() {
         return currentStation;
