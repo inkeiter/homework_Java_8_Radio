@@ -3,45 +3,53 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
-//    @Test
-//    public void constructionTestUpperUnvalid() {
-//        Radio radio = new Radio(20);
-//
-//        int expected = 0;
-//        int actual = radio.getCurrentStation();
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void constructionTestUnderUnvalid() {
-//        Radio radio = new Radio(-2);
-//
-//        int expected = 0;
-//        int actual = radio.getCurrentStation();
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void constructionTestValid() {
-//        Radio radio = new Radio(9);
-//
-//        int expected = 9;
-//        int actual = radio.getCurrentStation();
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void constructionTestJustValid() {
-//        Radio radio = new Radio(6);
-//
-//        int expected = 6;
-//        int actual = radio.getCurrentStation();
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
+    @Test
+    public void constructionTest1() {
+        Radio radio = new Radio(20);
+
+        radio.setCurrentStation(15);
+
+        int expected = 15;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void constructionTestUnValid() {
+        Radio radio = new Radio(-2);
+
+        radio.setCurrentStation(15);
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void constructionTestBorder1() {
+        Radio radio = new Radio(9);
+
+        radio.setCurrentStation(8);
+
+        int expected = 8;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void constructionTestBorder2() {
+        Radio radio = new Radio(6);
+
+        radio.setCurrentStation(5);
+
+        int expected = 5;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void shouldSetUpperValidStation() {
@@ -387,77 +395,4 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-//    @Test
-//    public void shouldSetStation() {
-//
-//        Radio radio = new Radio();
-//
-//        radio.currentStation = 1;
-//
-//        int expected = 1;
-//        int actual = radio.currentStation;
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-//    @Test
-//    public void shouldSetMaxStation() {
-//
-//        Radio radio = new Radio();
-//
-//        radio.setToMaxStation();
-//
-//        int expected = 9;
-//        int actual = radio.currentStation;
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-//    @Test
-//    public void shouldSetMinStation() {
-//
-//        Radio radio = new Radio();
-//
-//        radio.setToMinStation();
-//
-//        int expected = 0;
-//        int actual = radio.currentStation;
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-//    @Test
-//    public void shouldSwitchStation() {
-//
-//        Radio radio = new Radio();
-//
-//        int currentStation = 0;
-//
-//        int expected = 1;
-//        int actual = radio.getCurrentStation(currentStation);
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-//    @Test
-//    public void shouldSwitchLastStation() {
-//
-//        Radio radio = new Radio();
-//
-//        int currentStation = 9;
-//
-//        int expected = 0;
-//        int actual = radio.getCurrentStation(currentStation);
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
-//    @Test
-//    public void shouldSetNewCurrentStation() {
-//
-//        Radio radio = new Radio();
-//
-//        int newCurrentStation = 9;
-//        radio.currentStation = 0;
-//
-//        int expected = 9;
-//        int actual = radio.setCurrentStation(newCurrentStation);
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
 }
