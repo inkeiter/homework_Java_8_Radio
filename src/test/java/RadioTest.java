@@ -54,9 +54,9 @@ public class RadioTest {
     @Test
     public void shouldSetUpperValidStation() {
         Radio radio = new Radio();
-        radio.setCurrentStation(8);
+        radio.setCurrentStation(9);
 
-        int expected = 8;
+        int expected = 9;
         int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
@@ -65,7 +65,7 @@ public class RadioTest {
     @Test
     public void shouldSetUpperUnValidStation() {
         Radio radio = new Radio();
-        radio.setCurrentStation(10);
+        radio.setCurrentStation(11);
 
         int expected = 0;
         int actual = radio.getCurrentStation();
@@ -76,9 +76,9 @@ public class RadioTest {
     @Test
     public void shouldSetUpperBorderStation() {
         Radio radio = new Radio();
-        radio.setCurrentStation(9);
+        radio.setCurrentStation(10);
 
-        int expected = 9;
+        int expected = 10;
         int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
@@ -155,11 +155,11 @@ public class RadioTest {
     @Test
     public void testNextUpperValid() {
         Radio radio = new Radio();
-        radio.setCurrentStation(8);
+        radio.setCurrentStation(9);
 
         radio.nextStation();
 
-        int expected = 9;
+        int expected = 10;
         int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
@@ -168,7 +168,7 @@ public class RadioTest {
     @Test
     public void testNextUpperBorder() {
         Radio radio = new Radio();
-        radio.setCurrentStation(9);
+        radio.setCurrentStation(10);
 
         radio.nextStation();
 
@@ -224,7 +224,7 @@ public class RadioTest {
 
         radio.prevStation();
 
-        int expected = 9;
+        int expected = 10;
         int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
@@ -233,9 +233,9 @@ public class RadioTest {
     @Test
     public void shouldSetUpperValidVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(9);
+        radio.setCurrentVolume(99);
 
-        int expected = 9;
+        int expected = 99;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
@@ -244,7 +244,7 @@ public class RadioTest {
     @Test
     public void shouldSetUpperUnValidVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(11);
+        radio.setCurrentVolume(101);
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -255,9 +255,9 @@ public class RadioTest {
     @Test
     public void shouldSetUpperBorderVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
 
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
@@ -266,7 +266,7 @@ public class RadioTest {
     @Test
     public void shouldSetUpperOverUnValidVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(99);
+        radio.setCurrentVolume(990);
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -347,11 +347,11 @@ public class RadioTest {
     @Test
     public void testIncreaseUpperValid() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(9);
+        radio.setCurrentVolume(99);
 
         radio.increaseVolume();
 
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
@@ -360,11 +360,11 @@ public class RadioTest {
     @Test
     public void testIncreaseUpperBorder() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
 
         radio.increaseVolume();
 
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);

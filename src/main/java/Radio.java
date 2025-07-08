@@ -8,9 +8,9 @@ public class Radio {
     private int minVolume;
 
     public Radio () {
-        maxStation = 9;
+        maxStation = 10;
         minStation = 0;
-        maxVolume = 10;
+        maxVolume = 100;
         minVolume = 0;
    }
 
